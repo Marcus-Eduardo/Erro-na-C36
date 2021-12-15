@@ -18,14 +18,16 @@ class Form{
             this.botao.hide();
 
             jogador.nome = this.entrada.value();
-            jogador.update();
 
             numJogador++;
+            jogador.indice = numJogador;//! adicionei, para que o índice do jogador não permaneça nulo
+            jogador.update();//!mudei de linha
             jogador.updateNum(numJogador);
 
             this.ola.html("Olá "+jogador.nome);
             this.ola.position(150,160);
-        })
+        });
+
     }
     esconder(){
         this.titulo.hide(); 
